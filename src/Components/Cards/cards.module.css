@@ -1,0 +1,28 @@
+.cards{
+    width: 300px;
+    height: 300px;
+    background-color: #fff;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border-radius: 8px;
+}
+
+.imageContainer{
+    width: 80%;
+    height: 50%;
+}
+
+.imageContainer img{
+    width: 100%;
+    height: 100%;
+    border-radius: 8px;
+}
+
+.textProduct{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 80%;
+}
