@@ -4,7 +4,11 @@ import { AiOutlineShoppingCart } from "react-icons/ai";
 import sectionImage from "../../utills/sectionImage.svg"
 
 export class Section extends React.Component{
-    render() {
+  render() {
+
+    const {openContainerProduct} = this.props
+
+      console.log(this.props);
         return (
           <div className={style.container}>
             <div className={style.section}>
@@ -16,7 +20,7 @@ export class Section extends React.Component{
                 coffee in the morning
               </div>
               <div>
-                <button>
+                <button onClick={openContainerProduct}>
                   Order Now
                   <span>
                     <AiOutlineShoppingCart />
@@ -24,10 +28,10 @@ export class Section extends React.Component{
                 </button>
                 <button>Feedback</button>
               </div>
-                </div>
-                <div className={style.sectionPhoto}>
-                    <img src={sectionImage} alt="imgReklam"></img>
-                </div>
+            </div>
+            <div className={style.sectionPhoto}>
+              <img src={sectionImage} alt="imgReklam"></img>
+            </div>
           </div>
         );
     }

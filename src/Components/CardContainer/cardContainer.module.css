@@ -3,7 +3,11 @@
     height: 500px;
     background-color: #f9d9aa;
     position: absolute;
-    top: 100px;
+    top: 70px;
+    padding: 20px;
+    display: flex;
+    flex-wrap: wrap;
     left: 200px;
+    gap: 15px;
     border-radius: 30px;
 }
