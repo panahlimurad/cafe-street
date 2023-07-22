@@ -1,0 +1,61 @@
+.feedBack{
+    width: 70%;
+    min-height: 500px;
+    background-color: #d49940;
+    position: absolute;
+    top: 70px;
+    padding: 20px;
+    left: 200px;
+    border-radius: 30px;
+    display: flex;
+    justify-content: center;
+}
+
+.inputArea{
+    width: 100%;
+    color: #2f2105;
+    display: flex;
+    justify-content: center;
+}
+
+.inputArea form {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 50px;
+}
+
+.inputArea form input{
+    width: 80%;
+    margin-top: 20px;
+    border-radius: 8px;
+    height: 30px;
+    font-size: 20px;
+}
+
+.inputArea label{
+    margin-top: 20px;
+    font-weight: bold;
+}
+
+.inputArea textarea{
+     width: 80%;
+    font-size: 20px;
+    margin-top: 20px;
+    border-radius: 8px;
+}
+
+.inputArea button {
+    margin-top: 20px;
+    width: 30%;
+    border-radius: 8px;
+    font-size: 20px;
+    cursor: pointer;
+    color: #64471a;
+}
+
+.errorMessage{
+    color: red;
+    font-weight: bold;
+}

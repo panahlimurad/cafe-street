@@ -3,6 +3,7 @@ import style from "./style/index.css"
 import { Header } from "./Components/Header/header";
 import { Section } from "./Components/Section/section";
 import { CardContainer } from "./Components/CardContainer/cardContainer";
+import { FeedBack } from "./Components/FeedBack/feedBack";
 
 
 const data = [
@@ -49,32 +50,54 @@ export class App extends React.Component {
     super();
     this.state = {
       isShow: false,
+      isSHowFeedbackSection: false,
     };
-    
-    this.openContainerProduct = this.openContainerProduct.bind(this)
-    this.toggleState = this.toggleState.bind(this);
 
+    this.openContainerProduct = this.openContainerProduct.bind(this);
+    this.toggleState = this.toggleState.bind(this);
+    this.openFeedbackContainer = this.openFeedbackContainer.bind(this);
+    this.toggleStateFeedback = this.toggleStateFeedback.bind(this)
   }
 
   toggleState() {
     this.setState({
-      isShow:false
-    })
+      isShow: false,
+    });
+  }
+
+  toggleStateFeedback() {
+     this.setState({
+       isSHowFeedbackSection: false,
+     });
+  }
+
+  openFeedbackContainer() {
+    this.setState({
+      isSHowFeedbackSection: true,
+    });
   }
 
   openContainerProduct() {
     this.setState({
-      isShow:true
-    })
+      isShow: true,
+    });
   }
 
   render() {
     return (
       <main className={style.index}>
         <Header />
-        <Section openContainerProduct={this.openContainerProduct} />
+        <Section
+          openContainerProduct={this.openContainerProduct}
+          openFeedbackContainer={this.openFeedbackContainer}
+        />
         {this.state.isShow ? (
           <CardContainer data={data} toggleState={this.toggleState} />
+        ) : (
+          <div></div>
+        )}
+        {this.state.isSHowFeedbackSection ? (
+          <FeedBack toggleStateFeedback={this.toggleStateFeedback} />
         ) : (
           <div></div>
         )}

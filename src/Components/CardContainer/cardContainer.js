@@ -49,4 +49,5 @@ export class CardContainer extends React.Component {
 
 CardContainer.propTypes = {
   data: PropTypes.array,
+  toggleState: PropTypes.func,
 };

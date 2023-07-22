@@ -2,12 +2,16 @@ import React from "react";
 import style from "./section.module.css"
 import { AiOutlineShoppingCart } from "react-icons/ai";
 import sectionImage from "../../utills/sectionImage.svg"
+import PropTypes from "prop-types";
+
+
 
 export class Section extends React.Component{
   render() {
 
     const {openContainerProduct} = this.props
-
+    const {openFeedbackContainer} = this.props
+    
       console.log(this.props);
         return (
           <div className={style.container}>
@@ -26,7 +30,7 @@ export class Section extends React.Component{
                     <AiOutlineShoppingCart />
                   </span>
                 </button>
-                <button>Feedback</button>
+                <button onClick={openFeedbackContainer}>Feedback</button>
               </div>
             </div>
             <div className={style.sectionPhoto}>
@@ -36,3 +40,8 @@ export class Section extends React.Component{
         );
     }
 }
+
+Section.propTypes = {
+  openContainerProduct: PropTypes.func,
+  openFeedbackContainer: PropTypes.func,
+};

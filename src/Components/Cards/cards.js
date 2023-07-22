@@ -27,7 +27,7 @@ export class Cards extends React.Component {
       icon: "success",
       title: "Your order has been received",
       showConfirmButton: false,
-      timer: 1500,
+      timer: 2000,
     });
 
     closeOrderSection()
